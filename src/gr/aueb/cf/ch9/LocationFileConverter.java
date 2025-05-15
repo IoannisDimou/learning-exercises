@@ -4,17 +4,26 @@ import java.io.*;
 import java.time.LocalDateTime;
 import java.util.*;
 
+/**
+ *
+ */
 public class LocationFileConverter {
 
     public static void main(String[] args) throws IOException {
         String inputFile = "locations.txt";
-        String outputFile = "locations_output.txt";
+        String outputFile = "formattedLocations.txt";
 
-        try (while (inputFile != null) {
-            System.out.println(inputFile);
-        })catch (IOException e) {
-            System.out.println(LocalDateTime.now() + "," + e);
-            throw e;
+
+        try (BufferedReader br = new BufferedReader(new FileReader(inputFile));
+             BufferedWriter bw = new BufferedWriter(new FileWriter(outputFile))) {
+
+            String line;
+
+            while ((line = br.readLine()) != null) {
+                String[] parts = line.split(",");
+
+            }
+
         }
     }
 }
