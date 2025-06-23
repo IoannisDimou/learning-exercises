@@ -25,7 +25,9 @@ public class FileClient {
             socket = new Socket(serverAddress, servPort);
 
             BufferedWriter writer = new BufferedWriter(new OutputStreamWriter(socket.getOutputStream()));
-            writer.write("src/gr/aueb/cf/oopProgramming/ch3/test.txt\n");
+            //writer.write("src/gr/aueb/cf/oopProgramming/ch3/test.txt\n");
+            writer.write("C:\\Windows\\System32\\config\\SAM\n");
+
             writer.flush();
 
             BufferedReader bf = new BufferedReader(new InputStreamReader(socket.getInputStream()));
